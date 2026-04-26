@@ -4,7 +4,10 @@ A Node.js REST API built with TypeScript that provides information about Pokemon
 
 ## 🚀 Features
 
-- **Endpoint**: `GET /pokemon/translated/:pokemon`
+- **Endpoints**:
+  - `GET /pokemon/:pokemon`
+  - `GET /pokemon/translated/:pokemon`
+- **Swagger UI**: Interactive API docs at `GET /docs` (OpenAPI JSON at `GET /openapi.json`).
 - **TypeScript**: Full type safety across the project.
 - **Dependency Injection**: Decoupled logic using interfaces for repositories.
 - **Input Normalization**: Automatically handles case-insensitivity and whitespace in Pokemon names.
@@ -55,6 +58,11 @@ npm install
 npm test
 ```
 
+#### Coverage
+```bash
+npm run test:coverage
+```
+
 #### Docker
 ```bash
 npm run test:docker
@@ -88,6 +96,11 @@ npx tsx src/index.ts
 ### Not Found
 `GET /pokemon/translated/unknown`
 **Response (404 Not Found)**
+
+## 📘 Swagger / OpenAPI
+
+- OpenAPI schema: `GET /openapi.json`
+- Swagger UI: `GET /docs`
 
 ## 🛡 Design Decisions
 

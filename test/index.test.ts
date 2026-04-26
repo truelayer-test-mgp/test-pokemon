@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert';
 import request from 'supertest';
-import { createApp } from './index.js';
-import type { PokemonRepository } from './repository/pokemon-repository.js';
-import type { Pokemon } from './types.js';
+import { createApp } from '../src/index.js';
+import type { PokemonRepository } from '../src/repository/pokemon-repository.js';
+import type { Pokemon } from '../src/types.js';
 
 const pokemonData: Pokemon = {
   name: 'mewtwo',

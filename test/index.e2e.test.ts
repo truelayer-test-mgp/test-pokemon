@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert';
 import request from 'supertest';
-import app from './index.js';
+import app from '../src/index.js';
 
 test('E2E: GET /pokemon/translated/charizard should return 200 and Charizard data', async (t) => {
   const response = await request(app).get('/pokemon/translated/charizard');

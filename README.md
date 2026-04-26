@@ -55,7 +55,14 @@ npm -v
 
 Clone the repository and install dependencies:
 ```bash
-git clone https://github.com/truelayer-test-mgp/test-pokemon or git clone git@github.com:truelayer-test-mgp/test-pokemon.git
+git clone https://github.com/truelayer-test-mgp/test-pokemon
+````
+or 
+
+```bash
+git clone git@github.com:truelayer-test-mgp/test-pokemon.git
+````
+```bash
 cd truelayer
 npm install
 ```

@@ -96,7 +96,7 @@ npm run test:coverage
 npm run test:docker
 ```
 
-### Running with Docker
+### Running with Docker (Container)
 
 Build the image:
 ```bash
@@ -113,7 +113,7 @@ Test a sample endpoint:
 curl http://localhost:3000/pokemon/mewtwo
 ```
 
-### Starting the Server
+### Starting the Server (Local)
 
 ```bash
 # Development mode (using tsx)

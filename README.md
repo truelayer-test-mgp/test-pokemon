@@ -42,11 +42,25 @@ A Node.js REST API built with TypeScript that provides information about Pokemon
 
 ### Prerequisites
 
-- Node.js installed on your machine.
-- `npm` (comes with Node.js).
+- Node.js (v22 or newer)
+- `npm` (comes with Node.js)
+
+Verify your local versions:
+```bash
+node -v
+npm -v
+```
 
 ### Installation
 
+Clone the repository and install dependencies:
+```bash
+git clone <your-repo-url>
+cd truelayer
+npm install
+```
+
+If you already have the repository locally:
 ```bash
 npm install
 ```
@@ -68,12 +82,31 @@ npm run test:coverage
 npm run test:docker
 ```
 
+### Running with Docker
+
+Build the image:
+```bash
+docker build -t truelayer-api .
+```
+
+Run the API container:
+```bash
+docker run --rm -p 3000:3000 truelayer-api
+```
+
+Test a sample endpoint:
+```bash
+curl http://localhost:3000/pokemon/mewtwo
+```
+
 ### Starting the Server
 
 ```bash
 # Development mode (using tsx)
 npx tsx src/index.ts
 ```
+
+By default the API runs on `http://localhost:3000`.
 
 ## 🔍 API Usage
 

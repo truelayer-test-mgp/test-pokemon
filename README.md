@@ -25,15 +25,22 @@ A Node.js REST API built with TypeScript that provides information about Pokemon
 
 ```text
 ├── src/
+│   ├── openapi.ts                     # OpenAPI document used by /openapi.json and /docs
 │   ├── repository/
-│   │   ├── pokemon-repository.ts       # Interface definition
-│   │   └── http-pokemon-repository.ts  # HTTP implementation
-│   ├── index.ts                        # Express App & Factory
-│   └── types.ts                        # Shared TypeScript interfaces & Zod schemas
+│   │   ├── pokemon-repository.ts      # Pokemon repository contract
+│   │   ├── translation-repository.ts  # Translation repository contract
+│   │   ├── http-pokemon-repository.ts # PokéAPI implementation
+│   │   └── http-translation-repository.ts # FunTranslations implementation
+│   ├── index.ts                       # Express app factory and routes
+│   └── types.ts                       # Shared TypeScript schemas and types
 ├── test/
-│   ├── index.test.ts                   # Unit & Integration tests
-│   └── index.e2e.test.ts                 # End-to-End tests
+│   ├── index.test.ts                  # API unit/integration tests
+│   ├── repository.test.ts             # Repository-focused tests
+│   └── index.e2e.test.ts              # End-to-End tests
+├── Dockerfile
+├── docker-compose.yml
 ├── package.json
+├── package-lock.json
 ├── tsconfig.json
 └── README.md
 ```
@@ -56,14 +63,14 @@ npm -v
 Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/truelayer-test-mgp/test-pokemon
-````
-or 
+cd test-pokemon
+npm install
+```
 
+Or using SSH:
 ```bash
 git clone git@github.com:truelayer-test-mgp/test-pokemon.git
-````
-```bash
-cd truelayer
+cd test-pokemon
 npm install
 ```
 

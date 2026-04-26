@@ -5,6 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "node --import tsx --test src/index.test.ts",
+    "test:e2e": "node --import tsx --test src/index.e2e.test.ts",
     "test:docker": "docker build -t truelayer-tests . && docker run --rm truelayer-tests npm test"
   },
   "keywords": [],

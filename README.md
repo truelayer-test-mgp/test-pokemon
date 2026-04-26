@@ -24,10 +24,12 @@ A Node.js REST API built with TypeScript that provides information about Pokemon
 ├── src/
 │   ├── repository/
 │   │   ├── pokemon-repository.ts       # Interface definition
-│   │   └── http-pokemon-repository.ts  # HTTP implementation (WIP)
+│   │   └── http-pokemon-repository.ts  # HTTP implementation
 │   ├── index.ts                        # Express App & Factory
+│   └── types.ts                        # Shared TypeScript interfaces & Zod schemas
+├── test/
 │   ├── index.test.ts                   # Unit & Integration tests
-│   └── types.ts                        # Shared TypeScript interfaces
+│   └── index.e2e.test.ts                 # End-to-End tests
 ├── package.json
 ├── tsconfig.json
 └── README.md

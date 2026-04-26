@@ -107,3 +107,11 @@ npx tsx src/index.ts
 1.  **Interface-based DI**: The `createApp` function takes a `PokemonRepository` interface. This allows for easy swapping between a real HTTP repository and a Mock/File repository without changing the core business logic.
 2.  **No Heavy Mocking Libraries**: Leveraged the native `node:test` context for manual mocking in tests, keeping dependencies lightweight.
 3.  **Strict Normalization**: Input is normalized (trimmed and lowercased) early in the request lifecycle to prevent duplicate logic in repositories.
+
+## 🚀 What I'd change for production
+
+- Add request timeouts, retry policies with backoff, and circuit breakers for external APIs.
+- Introduce structured logging and metrics (latency, error rates, translation fallback rate) with centralized monitoring.
+- Add caching for Pokemon species responses to reduce external API calls and improve response times.
+- Enforce API rate limiting and stronger validation/abuse protection at the edge.
+- Standardize error responses as JSON and add request correlation IDs for easier debugging across services.
